@@ -83,7 +83,7 @@ class SalesController extends Controller
         ];
     
         // Enviar una solicitud PUT a la API externa para actualizar los datos
-        $response = Http::put('https://royalpaws.000webhostapp.com/api/ventas/' . $id, $data);
+        $response = Http::put('http://127.0.0.1:8000/api/ventas/' . $id, $data);
     
         // Manejar la respuesta de la API
         if ($response->successful()) {
@@ -106,7 +106,7 @@ class SalesController extends Controller
     public function destroy(string $id)
 {
     // Enviar una solicitud DELETE a la API externa para eliminar los datos
-    $response = Http::delete('https://royalpaws.000webhostapp.com/api/ventas/' . $id);
+    $response = Http::delete('http://127.0.0.1:8000/api/ventas/' . $id);
 
     // Manejar la respuesta de la API
     if ($response->successful()) {

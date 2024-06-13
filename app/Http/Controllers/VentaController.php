@@ -35,7 +35,7 @@ class VentaController extends Controller
         // Obtiene la URL de la API desde el archivo de configuración
         $url = env('API_URL');
         // Realiza una solicitud POST a la API para crear una nueva venta
-        $response = Http::post('https://royalpaws.000webhostapp.com/api/ventas', [
+        $response = Http::post('127.0.0.1:8000/api/ventas', [
             'usuario_ID' => auth()->user()->id,
             'descripcion' => $request->descripcion,
             'precio_Total' => $request->precio_Total,
